@@ -3,6 +3,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
+   
+
     <div className="flex justify-between items-center mx-auto x-6 py-12 md:flex-row max-w-7xl">
      <div className="ml-[92px] space-y-2">
      <p className="text-[16px] font-medium">Your go-to platform for 3D printing files</p>
@@ -16,5 +18,6 @@ export default function Home() {
      <Image src="/Frame 4.png" alt="hero" width={427} height={427}></Image>
      </div>
     </div>
+   
   );
 }
