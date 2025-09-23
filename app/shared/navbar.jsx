@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 export default function navbar() {
@@ -11,11 +13,20 @@ export default function navbar() {
         </Link>
       </div>
       <div className="flex gap-3">
-        <Link href={"/3d-model"}>3D Model</Link>
-        <Link href={"/about"} className="border-b text-[#F77429] mr-1">
-          About
-        </Link>
-      </div>
+      <Link
+        href="/3d-model"
+        className={usePathname === "/3d-model" ? "text-[#F77429] border-b" : ""}
+      >
+        3D Model
+      </Link>
+
+      <Link
+        href="/about"
+        className={usePathname === "/about" ? "text-[#F77429] border-b" : ""}
+      >
+        About
+      </Link>
+    </div>
     </div>
   );
 }
